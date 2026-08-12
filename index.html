@@ -16,10 +16,27 @@
             --loss-bg: #4d1b1b;
             --loss-text: #e74c3c;
         }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 20px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 20px; } 
         
         .header-container { text-align: center; margin-bottom: 20px; }
-        h1 { color: var(--accent); margin: 0 0 4px 0; }
+
+        /* Header Title Container mit Logos links & rechts */
+        .title-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 4px;
+        }
+
+        .header-logo {
+            height: 48px;
+            width: auto;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        h1 { color: var(--accent); margin: 0; }
         .date-sub { color: var(--sub); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.5px; }
 
         h2, h3 { text-align: center; color: var(--accent); margin-bottom: 15px; }
@@ -55,12 +72,22 @@
         .hidden { display: none; }
         .ko-section { max-width: 800px; margin: 0 auto; }
         .placeholder { color: var(--sub); font-style: italic; font-weight: normal !important; }
+
+        @media (max-width: 600px) {
+            .title-row { gap: 8px; }
+            .header-logo { height: 35px; }
+            h1 { font-size: 1.3rem; }
+        }
     </style>
 </head>
 <body>
 
     <div class="header-container">
-        <h1>Internes Turnier TV Kapellen 3</h1>
+        <div class="title-row">
+            <img src="https://lh3.googleusercontent.com/d/1PB4X2QrrMlaRlajQEWDtJxRP2c6VTsI5" alt="TV Kapellen Logo" class="header-logo">
+            <h1>Internes Turnier TV Kapellen 3</h1>
+            <img src="https://lh3.googleusercontent.com/d/1PB4X2QrrMlaRlajQEWDtJxRP2c6VTsI5" alt="TV Kapellen Logo" class="header-logo">
+        </div>
         <div class="date-sub">22.08.2026</div>
     </div>
 
